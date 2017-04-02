@@ -14,14 +14,6 @@ function ms_to_kmh(speed) {
   return ((speed / 1000) * 3600).toFixed(2);
 }
 export function weatherUpdate() {
-  /*console.log('weather update');
-  fetch('https://www.wired.com/category/gear/feed/')
-    .then(response => response.json())
-    .then(json => {
-      console.log('AAAAAAAAAAAAAA');
-      console.log(json);
-    });
-  console.log('done with new');*/
   return fetch('http://api.openweathermap.org/data/2.5/weather?zip=02134,us&units=metric&appid=263a7ffda7b402339c3365e9a096984d')
     .then(response => response.json())
     .then(json => {
@@ -47,10 +39,10 @@ export function weatherUpdate() {
       }
     })
 }
-export function forecastUpdate() {
-  return fetch('http://api.openweathermap.org/data/2.5/forecast?zip=02134,us&appid=263a7ffda7b402339c3365e9a096984d')
-    .then(response => response.json())
-    .then(json => {
-      console.log(json);
-    })
-}
+//export function forecastUpdate() {
+  //return fetch('http://api.openweathermap.org/data/2.5/forecast?zip=02134,us&appid=263a7ffda7b402339c3365e9a096984d')
+    //.then(response => response.json())
+    //.then(json => {
+      //console.log(json);
+    //})
+//}

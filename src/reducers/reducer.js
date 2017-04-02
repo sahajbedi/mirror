@@ -25,6 +25,23 @@ function weather(state = weatherState, action) {
   }
 }
 
+var weatherForecastState = {
+  predictions: [{
+    day: '',
+    max: 0,
+    min: 0,
+    icon: '' 
+  }]
+}
+function weatherForecast(state = weatherForecastState, action) {
+  switch(action.type) {
+    case 'WEATHER_FORECAST_UPDATE':
+      return action.payload;
+    default: 
+      return state;
+  }
+}
+
 var mbtaState = {
   predictions: [{
     eta: 0,
@@ -60,6 +77,7 @@ function reddit(state = {}, action) {
 const testApp = combineReducers({
   test,
   weather,
+  weatherForecast,
   mbta,
   clock,
   reddit
