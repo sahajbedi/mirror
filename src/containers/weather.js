@@ -23,7 +23,7 @@ class Weather extends Component{
         <div className="row">
           <div className="col-sm-3 col-lg-4">
             <img src={this.props.weather.icon} alt='Weather Icon' className="weather_icon_main"/>
-            <p className="text-capitalize">{this.props.weather.description}</p>
+            <p className="text-capitalize text-center">{this.props.weather.description}</p>
           </div>
           <div className="col-sm-3 col-lg-4">
             <h2>{this.props.weather.temperature} &#8451;</h2>
